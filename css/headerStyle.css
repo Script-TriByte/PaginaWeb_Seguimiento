@@ -1,0 +1,128 @@
+.centradoEnHeader{
+    position: relative;
+    top: 30%;
+}
+
+.textoClaro{
+    color: #fddfb5;
+}
+
+header{
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px 0px 10px 0px;
+}
+
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+  
+nav ul li{
+    margin-right: 50px;
+}
+  
+nav ul li a{
+    text-decoration: none;
+    position: relative;
+    top: 30%;
+}
+  
+.logo{
+    position: relative;
+    height: 60px;
+    left: 20px;
+}
+  
+#contenedorUsuario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    margin-right: 30px;
+    cursor: pointer;
+}
+  
+#iconoUsuario{
+    position: relative;
+    height: 30px;
+    width: 30px;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.boton{
+    width: fit-content;
+    background: none;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+#idiomaDelSistema{
+    background-image: url(../img/banderaUruguay.png);
+    width: 25px;
+    height: 17px;
+    background-size: cover;
+    border: solid 3px #fddfb5;
+    opacity: 70%;
+}
+  
+#idiomaDelSistema:hover{
+    opacity: 100%;
+}
+  
+#aparienciaDelSistema{
+    background-image: url(../img/iconoModoOscuro.png);
+    width: 25px;
+    height: 25px;
+    background-size: cover;
+}
+
+.divEnHeader{
+    margin-top: 10px;
+}
+
+.submenu {
+    position: absolute;
+    top: 60px;
+    width: 250px;
+    height: 50px;
+    background: rgba(30, 30, 30);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1s;
+    z-index: 1;
+    border-radius: 10px;
+    display: flex;
+    align-items:baseline;
+    justify-content:end;
+    text-align: center;
+    
+  }
+  
+  .menu li:hover .submenu {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  #iconoSalida{
+    position: relative;
+    height: 25px;
+    width: 25px;
+    left: -23px;
+    top: 10px;
+  }

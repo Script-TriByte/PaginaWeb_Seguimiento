@@ -1,0 +1,55 @@
+.formulario{
+    position: relative;
+    top: 150px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    width: 700px;
+    height: 550px;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0.2, 0.2, 0.2);
+    color: #fddfb5;
+}
+
+textarea, input {
+    display: block;
+    margin-bottom: 10px;
+    width: 500px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #4b4b4b;
+    color: white;
+}
+
+label{
+    display: inline-block;
+    margin-bottom: 5px; 
+}
+
+#botonEnviar {
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    color: #fddfb5;
+    text-shadow: 0.1em 0.1em #111111;
+}
+
+.mapa{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 200px;
+    padding-bottom: 20px;
+}
+
+#aterisco{
+    color: red;
+}
