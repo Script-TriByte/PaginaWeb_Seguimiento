@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../img/iconoPestana.png">
+    <link rel="stylesheet" href="/css/headerStyle.css">
+    <link rel="stylesheet" href="/css/clasesGlobales.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Aplicación de Seguimiento - ELS</title>
+</head>
+<body>
+    <header class="textoClaro">
+        <a id="logoDelSistema" href="/"><img class="logo" src="/img/Logo del Sistema.png"></a>
+        <nav>
+          <ul class="menu">
+            <li class="cambioCursor"><a id="enlaceAHomepage" href="/">HOME</a></li>
+            <li><a href="/html/opcionesHeader/acercaDe.html">ACERCA DE</a></li>
+            <li class="cambioCursor"><a href="/html/opcionesHeader/contacto.html">CONTACTO</a></li>
+            <li><div class="boton textoClaro cambioCursor divEnHeader" id="idiomaDelSistema"></div></li>
+            <li><div class="boton textoClaro cambioCursor divEnHeader" id="aparienciaDelSistema"></div></li>
+            <li>
+              <div id="contenedorUsuario">
+                <img class="usuario" id="iconoUsuario" src="/img/iconoUsuario.png">
+                <button class="boton textoClaro">NOMBRE DEL USUARIO</button>
+                <ul class="submenu">
+                  <li><img class="salir" id="iconoSalida" src="/img/iconoSalir.png">
+                    <a id="botonCerrarSesion" href="/">CERRAR SESIÓN</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </nav>
+    </header>
+    <table id="informacionPaquetes">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Contenido</th>
+                <th>Cantidad de Artículos</th>
+                <th>Destino</th>
+            </tr>
+        </thead>
+        <hr>
+        <tbody id="contenidoDeTabla">
+        </tbody>
+    </table>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
