@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/css/headerStyle.css">
     <link rel="stylesheet" href="/css/clasesGlobales.css">
     <link rel="stylesheet" href="/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>Aplicación de Seguimiento - ELS</title>
 </head>
 <body>
@@ -15,8 +16,8 @@
         <nav>
           <ul class="menu">
             <li class="cambioCursor"><a id="enlaceAHomepage" href="/">HOME</a></li>
-            <li><a href="/html/opcionesHeader/acercaDe.html">ACERCA DE</a></li>
-            <li class="cambioCursor"><a href="/html/opcionesHeader/contacto.html">CONTACTO</a></li>
+            <li><a id="acercaDe" href="/html/opcionesHeader/acercaDe.html">ACERCA DE</a></li>
+            <li class="cambioCursor"><a id="contacto" href="/html/opcionesHeader/contacto.html">CONTACTO</a></li>
             <li><div class="boton textoClaro cambioCursor divEnHeader" id="idiomaDelSistema"></div></li>
             <li><div class="boton textoClaro cambioCursor divEnHeader" id="aparienciaDelSistema"></div></li>
             <li>
@@ -25,7 +26,7 @@
                 <button class="boton textoClaro">NOMBRE DEL USUARIO</button>
                 <ul class="submenu">
                   <li><img class="salir" id="iconoSalida" src="/img/iconoSalir.png">
-                    <a id="botonCerrarSesion" href="/">CERRAR SESIÓN</a></li>
+                    <a id="cerrarSesion" href="/">CERRAR SESIÓN</a></li>
                 </ul>
               </div>
             </li>
@@ -45,6 +46,10 @@
         <tbody id="contenidoDeTabla">
         </tbody>
     </table>
+    <div id="contenedorMensajeDeError">
+      <label class="textoClaro" id="mensajeDeError"></label>
+    </div>
     <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/variables.js"></script>
 </body>
 </html>
