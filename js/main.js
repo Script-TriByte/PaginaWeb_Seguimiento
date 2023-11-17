@@ -30,9 +30,9 @@ $('#idiomaDelSistema').click(function(){
 
 $(document).ready(function () {
   if(document.cookie.indexOf("lang=en") !== -1){
-      $('#idiomaDelSistema').css('background-image', 'url(/img/banderaUK.png)')
+      $('#idiomaDelSistema').css('background-image', 'url(/PaginaWeb_Seguimiento/img/banderaUK.png)')
   } else {
-      $('#idiomaDelSistema').css('background-image', 'url(/img/banderaUruguay.png)')
+      $('#idiomaDelSistema').css('background-image', 'url(/PaginaWeb_Seguimiento//img/banderaUruguay.png)')
   }
   Promise.all([fetch(ruta), fetch('./json/elementos.json')])
   .then((responses) => Promise.all(responses.map((response) => response.json())))

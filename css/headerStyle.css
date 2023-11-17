@@ -85,13 +85,6 @@ a{
     opacity: 100%;
 }
 
-#aparienciaDelSistema{
-    background-image: url(../img/iconoModoOscuro.png);
-    width: 25px;
-    height: 25px;
-    background-size: cover;
-}
-
 .divEnHeader{
     margin-top: 10px;
 }

@@ -1,5 +1,5 @@
-export let ruta = './json/es.json'
+export let ruta = '/PaginaWeb_Seguimiento/json/es.json'
 
 if(document.cookie.indexOf("lang=en") !== -1){
-    ruta = './json/en.json'
+    ruta = '/PaginaWeb_Seguimiento/json/en.json'
 }
