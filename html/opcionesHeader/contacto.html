@@ -9,52 +9,61 @@
     <link rel="stylesheet" href="/css/headerStyle.css">
     <link rel="stylesheet" href="/css/contacto.css">
     <link rel="stylesheet" href="/css/clasesGlobales.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>E.L.S - Contacto</title>
 </head>
 <body>
-    <header class="textoClaro">
-        <a href="/"><img class="logo" src="/img/Logo del Sistema.png"></a>
-        <nav>
-          <ul class="menu">
-            <li class="cambioCursor"><a href="/">HOME</a></li>
-            <li><a href="/html/opcionesHeader/acercaDe.html">ACERCA DE</a></li>
-            <li class="cambioCursor"><a href="/html/opcionesHeader/contacto.html">CONTACTO</a></li>
-            <li><div class="boton textoClaro cambioCursor divEnHeader" id="idiomaDelSistema"></div></li>
-            <li><div class="boton textoClaro cambioCursor divEnHeader" id="aparienciaDelSistema"></div></li>
-            <li>
-              <div id="contenedorUsuario">
-                <img class="usuario" id="iconoUsuario" src="/img/iconoUsuario.png">
-                <button class="boton textoClaro">NOMBRE DEL USUARIO</button>
-                <ul class="submenu">
-                  <li><img class="salir" id="iconoSalida" src="/img/iconoSalir.png">
-                    <a href="/html/login.html">CERRAR SESIÓN</a></li>
-                </ul>
-              </div>
-            </li>
-          </ul>
-        </nav>
-      </header>
+  <header class="textoClaro">
+    <a href="/"><img class="logo" src="/img/Logo del Sistema.png"></a>
+    <nav>
+    <div class="menu-icon" onclick="menu()">
+            <img src="/img/iconoMenu.png" alt="Menú">
+        </div>
+      <ul class="menu">
+        <li class="cambioCursor"><a href="/">HOME</a></li>
+        <li><a href="/html/opcionesHeader/acercaDe.html" id="acercaDe">ACERCA DE</a></li>
+        <li class="cambioCursor"><a href="/html/opcionesHeader/contacto.html" id="contacto">CONTACTO</a></li>
+        <li><div class="boton textoClaro cambioCursor divEnHeader" id="idiomaDelSistema"></div></li>
+        <li>
+          <div id="contenedorUsuario">
+            <img class="usuario" id="iconoUsuario" src="/img/iconoUsuario.png">
+            <button class="boton textoClaro">NOMBRE DEL USUARIO</button>
+            <ul class="submenu">
+              <li><img class="salir" id="iconoSalida" src="/img/iconoSalir.png">
+                <a href="/html/login.html" id="cerrarSesion">CERRAR SESIÓN</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <script>
+      function menu() {
+      var menu = document.querySelector('nav ul');
+      menu.classList.toggle('active');
+}
+    </script>
+  </header>
       <div class="formulario">
-        <form id="formularioContacto" method="post" action="../../php/correo.php">
-            <label for="nombre">NOMBRE <label id="aterisco">*</label>:</label>
+        <form id="formularioContacto">
+            <label for="nombre" id="name">NOMBRE</label><label id="asterisco1">*</label>
             <input type="text" id="nombre" name="nombre" required>
 
-            <label for="telefono">TELÉFONO:</label>
+            <label for="telefono" id="tel">TELÉFONO</label>
             <input type="number" id="telefono" name="telefono">
 
-            <label for="email">CORREO ELECTRÓNICO <label id="aterisco">*</label>:</label>
+            <label for="email" id="correo">CORREO ELECTRÓNICO</label><label id="asterisco2">*</label>
             <input type="email" id="email" name="email" required>
 
-            <label for="mensaje">MENSAJE <label id="aterisco">*</label>:</label>
+            <label for="mensaje" id="texto">MENSAJE</label><label id="asterisco3">*</label>
             <textarea id="mensaje" name="mensaje" rows="10" required></textarea>
 
-            <input type="submit" id="botonEnviar" value="ENVIAR">
+            <button type="submit" id="botonEnviar" value="ENVIAR"><b>ENVIAR</b></button>
         </form>
-        <p id="respuesta" style="display: none;"></p>
     </div>
 <div class="mapa">
   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3272.069076626295!2d-56.190656525042264!3d-34.90471597284782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f81ccb64d8093%3A0x85590499beff31c3!2sYaguar%C3%B3n%201400%2C%2011100%20Montevideo%2C%20Departamento%20de%20Montevideo!5e0!3m2!1ses-419!2suy!4v1695141840410!5m2!1ses-419!2suy" width="740" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
-<script src="/js/correo.js"></script>
+<script type="module" src="/js/correo.js"></script>
+<script type="module" src="/js/variables.js"></script>
 </body>
 </html>

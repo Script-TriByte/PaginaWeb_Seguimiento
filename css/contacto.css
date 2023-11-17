@@ -15,7 +15,7 @@
     color: #fddfb5;
 }
 
-textarea, input {
+textarea, input, button {
     display: block;
     margin-bottom: 10px;
     width: 500px;
@@ -53,3 +53,38 @@ label{
 #aterisco{
     color: red;
 }
+
+#iconoUsuario{
+    position: static;
+    margin-bottom: 4%;
+}
+
+#idiomaDelSistema{
+    position: absolute;
+    margin-top: 18px;
+}
+
+@media screen and (max-width: 768px) {
+    .formulario{
+        width: 70%;
+    }
+  }
+  
+  @media screen and (max-width: 320px){
+    .formulario{
+        width: 70%;
+    }
+
+    input, textarea{
+        width: 60%;
+        margin-left: 15%;
+    }
+
+    #botonEnviar{
+        width: 80%;
+    }
+
+    iframe{
+        width: 70%;
+    }
+  }

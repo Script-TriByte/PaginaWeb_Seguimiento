@@ -6,7 +6,7 @@
     <link rel="icon" href="../../img/iconoPestana.png">
     <link rel="stylesheet" href="/css/headerStyle.css">
     <link rel="stylesheet" href="/css/clasesGlobales.css">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/seguimiento.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>Aplicación de Seguimiento - ELS</title>
 </head>
@@ -14,6 +14,9 @@
     <header class="textoClaro">
         <a id="logoDelSistema" href="/"><img class="logo" src="/img/Logo del Sistema.png"></a>
         <nav>
+          <div class="menu-icon" onclick="menu()">
+            <img src="/img/iconoMenu.png" alt="Menú">
+        </div>
           <ul class="menu">
             <li class="cambioCursor"><a id="enlaceAHomepage" href="/">HOME</a></li>
             <li><a id="acercaDe" href="/html/opcionesHeader/acercaDe.html">ACERCA DE</a></li>
@@ -31,23 +34,30 @@
             </li>
           </ul>
         </nav>
+        <script>
+          function menu() {
+          var menu = document.querySelector('nav ul');
+          menu.classList.toggle('active');
+    }
+        </script>
     </header>
     <table id="informacionPaquetes">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Contenido</th>
-                <th>Cantidad de Artículos</th>
-                <th>Destino</th>
-            </tr>
-        </thead>
-        <hr>
-        <tbody id="contenidoDeTabla">
-        </tbody>
-    </table>
-    <div id="contenedorMensajeDeError">
-      <label class="textoClaro" id="mensajeDeError"></label>
-    </div>
+      <thead>
+          <tr>
+              <th>ID</th>
+              <th id="contenido">Contenido</th>
+              <th id="cantidadArticulo">Cantidad de Artículos</th>
+              <th id="destino">Destino</th>
+          </tr>
+      </thead>
+      <hr>
+      <tbody id="contenidoDeTabla">
+        <div id="horaLlegadaContainer"></div>
+      </tbody>
+  </table>
+  <div id="contenedorMensajeDeError">
+    <label class="textoClaro" id="mensajeDeError"></label>
+  </div>
     <script type="module" src="js/main.js"></script>
     <script type="module" src="js/variables.js"></script>
 </body>

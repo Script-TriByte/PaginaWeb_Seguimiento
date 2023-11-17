@@ -9,52 +9,64 @@
     <link rel="stylesheet" href="/css/headerStyle.css">
     <link rel="stylesheet" href="/css/acercaDe.css">
     <link rel="stylesheet" href="/css/clasesGlobales.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>E.L.S - Acerca De</title>
 </head>
 <body>
-    <header class="textoClaro">
-        <a href="/"><img class="logo" src="/img/Logo del Sistema.png"></a>
-        <nav>
-          <ul class="menu">
-            <li class="cambioCursor"><a href="/">HOME</a></li>
-            <li><a href="/html/opcionesHeader/acercaDe.html">ACERCA DE</a></li>
-            <li class="cambioCursor"><a href="/html/opcionesHeader/contacto.html">CONTACTO</a></li>
-            <li><div class="boton textoClaro cambioCursor divEnHeader" id="idiomaDelSistema"></div></li>
-            <li><div class="boton textoClaro cambioCursor divEnHeader" id="aparienciaDelSistema"></div></li>
-            <li>
-              <div id="contenedorUsuario">
-                <img class="usuario" id="iconoUsuario" src="/img/iconoUsuario.png">
-                <button class="boton textoClaro">NOMBRE DEL USUARIO</button>
-                <ul class="submenu">
-                  <li><img class="salir" id="iconoSalida" src="/img/iconoSalir.png">
-                    <a href="/html/login.html">CERRAR SESIÓN</a></li>
-                </ul>
-              </div>
-            </li>
-          </ul>
-        </nav>
-      </header>
+  <header class="textoClaro">
+    <a href="/"><img class="logo" src="/img/Logo del Sistema.png"></a>
+    <nav>
+    <div class="menu-icon" onclick="menu()">
+            <img src="/img/iconoMenu.png" alt="Menú">
+        </div>
+      <ul class="menu">
+        <li class="cambioCursor"><a href="/">HOME</a></li>
+        <li><a href="/html/opcionesHeader/acercaDe.html" id="acercaDe">ACERCA DE</a></li>
+        <li class="cambioCursor"><a href="/html/opcionesHeader/contacto.html" id="contacto">CONTACTO</a></li>
+        <li><div class="boton textoClaro cambioCursor divEnHeader" id="idiomaDelSistema"></div></li>
+        <li>
+          <div id="contenedorUsuario">
+            <img class="usuario" id="iconoUsuario" src="/img/iconoUsuario.png">
+            <button class="boton textoClaro">NOMBRE DEL USUARIO</button>
+            <ul class="submenu">
+              <li><img class="salir" id="iconoSalida" src="/img/iconoSalir.png">
+                <a href="/html/login.html" id="cerrarSesion">CERRAR SESIÓN</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <script>
+      function menu() {
+      var menu = document.querySelector('nav ul');
+      menu.classList.toggle('active');
+}
+    </script>
+  </header>
     <div class="quickCarry">
         <h1>Quick Carry</h1>
-        <p>La empresa <b>QUICK CARRY</b> se dedica al transporte de paquetería en distribución nacional, con una 
+        <p id="qDescripcion">La empresa QUICK CARRY se dedica al transporte de paquetería en distribución nacional, con una 
             presencia en la proximidad de las principales ciudades y centros poblados en la mayoría de los 
             departamentos de Uruguay.</p>
-        <p>Un cliente importante para QUICK CARRY es CRECOM, compañía de distribución de Venta Flash en 
+        <p id="quDescripcion">Un cliente importante para QUICK CARRY es CRECOM, compañía de distribución de Venta Flash en 
             e-Commerce. CRECOM tiene la plataforma central en una zona industrial de las proximidades de 
             Montevideo.</p>
     </div>
 
     <div class="empresa">
         <h1>Script TriByte</h1>
-        <p>“<b>Script TriByte</b>” es una empresa centrada principalmente en el desarrollo de software en Uruguay para
+        <p id="sDescripcion">“Script TriByte” es una empresa centrada principalmente en el desarrollo de software en Uruguay para
             todo público. Con el objetivo de crear programas que faciliten los medios de trabajo de nuestros 
             clientes.</p>
-        <p>En lo que respecta a nuestro nombre, la palabra “Script” sugiere una relación con el 
+        <p id="scDescripcion">En lo que respecta a nuestro nombre, la palabra “Script” sugiere una relación con el 
             software y la programación, mientras que “TriByte” está haciendo referencia al almacenamiento de 
             datos en formato de bytes.</p>
-        <p>También posee relación con la idea de tres personas, siendo estas los 
+        <p id="scrDescripcion">También posee relación con la idea de tres personas, siendo estas los 
             fundadores de la empresa, trabajando en equipo para lograr los objetivos de la empresa, esto con 
             el fin de transmitir los valores del trabajo en equipo y compromiso con el éxito colectivo.</p>
     </div>
+
+    <script type="module" src="/js/acercaDe.js"></script>
+    <script type="module" src="/js/variables.js"></script>
 </body>
 </html>

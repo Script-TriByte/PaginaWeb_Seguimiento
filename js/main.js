@@ -38,9 +38,9 @@ $(document).ready(function () {
   .then((responses) => Promise.all(responses.map((response) => response.json())))
   .then((data) => {
       const idioma = data[0];
-      const arrayDeIdioma = idioma[0]
+      const arrayDeIdioma = idioma[19]
       const arrayDeTextos = data[1];
-      const arrayDeTextos2 = arrayDeTextos[0]
+      const arrayDeTextos2 = arrayDeTextos[19]
 
       for (let posicion = 0; posicion < Object.keys(arrayDeTextos2).length; posicion++){
           let texto = document.getElementById(arrayDeTextos2[posicion])
@@ -62,7 +62,7 @@ $(document).ready(function () {
     if(data.mensaje != null) {
       tablaHTML.style.display = "none";
       const avisoDeSinContenidos = document.createElement('label');
-      avisoDeSinContenidos.innerText = data.mensaje;
+      avisoDeSinContenidos.innerText = 'La tabla está vacía.';
       avisoDeSinContenidos.id = "labelDeAviso";
       document.body.appendChild(avisoDeSinContenidos);
     } else {
@@ -77,9 +77,27 @@ $(document).ready(function () {
         `;
         contenidosTabla.appendChild(columna);
     });
+    obtenerHoraLlegada();
     }
   })
   .catch(error => {
     tablaHTML.style.display = "none";
     contenedorMensajeDeError.style.display = "Block"
   })
+
+  function obtenerHoraLlegada() {
+    fetch(urlAPITransito + '/api/v3/tiempo/{idPaquete}')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('No se pudo obtener la hora de llegada.');
+        }
+        return response.json();
+      })
+      .then(data => {
+        const horaRestante = data.horaRestante;
+        console.log(`Hora restante de llegada: ${horaRestante}`);
+      })
+      .catch(error => {
+        console.error(`Error al obtener la hora de llegada: ${error.message}`);
+      });
+  }

@@ -23,3 +23,27 @@
     border-radius: 10px;
     background-color: #fddfb5;
 }
+
+@media screen and (max-width: 768px) {
+    .quickCarry{
+        width: 90%;
+        margin-top: 15%;
+    }
+
+    .empresa{
+        width: 90%;
+    }
+  }
+  
+  @media screen and (max-width: 320px){
+    .quickCarry{
+        width: 90%;
+        margin-top: 30%;
+        height: 30%;
+    }
+
+    .empresa{
+        width: 90%;
+        height: 30%;
+    }
+  }
